@@ -1,0 +1,106 @@
+@import "colors";
+@import "fonts";
+@import "sizes";
+
+body {
+  font-family: $primary-font-stack;
+  font-size: $primary-font-size;
+  line-height: $primary-line-height;
+}
+
+.element-stack{
+  padding: 0 ($gutter / 2);
+  margin: ($gutter / 2) 0;
+}
+
+.element-user{
+  display: inline-block;
+  vertical-align: middle;
+  color: #555;
+  cursor: pointer;
+}
+
+.board{
+  column-width: 230px;
+  column-gap: 15px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 30px auto;
+  }
+
+
+.item{
+  width: $itemWidth + $gutter;
+  border-radius: $borderRadius;
+  cursor: zoom-in;
+  display:inline-block;
+  padding: ($gutter / 10) 0;
+  &:hover {
+    background: #f3f3f3;
+  }
+  &__stack{
+    @extend .element-stack ;
+    column-break-inside: avoid;
+    &--image{
+      display: inline-block;
+      width: $itemWidth;
+      border-radius: $borderRadius;
+      // height: random(300)+px;
+    }
+  }
+  &__info{
+    position: relative;
+    &--pin-count{
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding-top: 0;
+      color: #a7a7a7;
+      font-weight: bold;
+      padding: $gutter / 2;
+    }
+    &--titles{
+      @extend .element-stack ;
+      .item-title{
+        max-width: $titleWidth;
+        color: #444;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: bold;
+      }
+      .item-subtl{
+        max-width: $titleWidth;
+        color: #b5b5b5;
+        font-size: 11px;
+        line-height: 12px;
+        font-weight: bold;
+      }
+    }
+    &--user{
+      @extend .element-stack ;
+      .item-avatar{
+        @extend .element-user ;
+        background-image: url('https://s-media-cache-ak0.pinimg.com/avatars/arabelyuska_1476548892_60.jpg');
+        background-size: cover;
+        width: $avatarSize;
+        height: $avatarSize;
+        border-radius: 50%;
+        margin-right: 8px;
+      }
+      .item-data{
+        @extend .element-user ;
+        &__dataname{
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.none{
+  display:none;
+}
+
+.block{
+  display:block;
+}

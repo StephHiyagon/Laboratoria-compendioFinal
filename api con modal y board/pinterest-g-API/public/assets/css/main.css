@@ -1,0 +1,73 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-size: 11px;
+  line-height: 12px; }
+
+.element-stack, .item__stack, .item__info--titles, .item__info--user {
+  padding: 0 10px;
+  margin: 10px 0; }
+
+.element-user, .item__info--user .item-avatar, .item__info--user .item-data {
+  display: inline-block;
+  vertical-align: middle;
+  color: #555;
+  cursor: pointer; }
+
+.board {
+  column-width: 230px;
+  column-gap: 15px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 30px auto; }
+
+.item {
+  width: 256px;
+  border-radius: 6px;
+  cursor: zoom-in;
+  display: inline-block;
+  padding: 2px 0; }
+  .item:hover {
+    background: #f3f3f3; }
+  .item__stack {
+    column-break-inside: avoid; }
+    .item__stack--image {
+      display: inline-block;
+      width: 236px;
+      border-radius: 6px; }
+  .item__info {
+    position: relative; }
+    .item__info--pin-count {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding-top: 0;
+      color: #a7a7a7;
+      font-weight: bold;
+      padding: 10px; }
+    .item__info--titles .item-title {
+      max-width: 145px;
+      color: #444;
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: bold; }
+    .item__info--titles .item-subtl {
+      max-width: 145px;
+      color: #b5b5b5;
+      font-size: 11px;
+      line-height: 12px;
+      font-weight: bold; }
+    .item__info--user .item-avatar {
+      background-image: url("https://s-media-cache-ak0.pinimg.com/avatars/arabelyuska_1476548892_60.jpg");
+      background-size: cover;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      margin-right: 8px; }
+    .item__info--user .item-data__dataname {
+      font-weight: bold; }
+
+.none {
+  display: none; }
+
+.block {
+  display: block; }

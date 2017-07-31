@@ -1,0 +1,12 @@
+body {
+  background-color: #fffaaa;
+}
+
+span {
+  background-color: #fff;
+  width: 200px;
+  height: 200px;
+  border:1px solid blue;
+  margin:20px;
+  padding:30px;
+}

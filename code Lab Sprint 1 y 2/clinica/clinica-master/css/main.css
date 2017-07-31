@@ -1,0 +1,47 @@
+.un-paciente{
+	border: 2px solid black;
+	display: inline-block;
+	margin: 20px 0 0 20px;
+	padding: 15px;
+}
+.un-paciente p { 
+	margin: 3px 0;
+}
+body{
+	text-align: center;
+	padding-top: 80px;
+}
+form{
+	display: inline-block;
+	text-align: left;
+}
+button{
+	margin: 0 auto;
+	display: block;
+}
+label{
+	display: inline-block;
+	width: 60px;
+}
+span{
+	color: red;
+	margin-left: 60px;
+}
+#bienvenida-paciente{
+	width: 200px;
+    border: 1px solid black;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+}
+#nombre-paciente,#apellido-paciente,#edad-paciente,#genero-paciente,#ciudad-paciente,#pais-paciente{
+	color: black;
+	margin: 0;
+}
+.contenedor-boton{
+	text-align: right;
+}
+.contenedor-boton button{
+	display: inline-block;
+	margin-right: 30px;
+}

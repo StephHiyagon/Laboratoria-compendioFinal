@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <title>Pinterest</title>
+</head>
+<body>
+  <h1>Pinterest</h1>
+  <div class="container" id="root">
+
+    <!-- Bloque header -->
+    <header class="header">
+      <!-- Elemento Navegador -->
+      <nav class="header__nav">
+        <img src="assets/img/pinterest-logo.png" class="header__nav--logo" alt="Logo de Pinterest">
+        <div class="header__nav--search">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <input type="text" placeholder="Buscar">
+        </div>
+        <img src="assets/img/icon-profile.png" class="header__nav--profile" alt="Icono de persona">
+        <img src="assets/img/menu-hamburguer.png" class="header__nav--menu" alt="Icono de menu">
+        <img src="assets/img/message.png" class="header__nav--message" alt="Icono de mensaje">
+      </nav>
+      <!-- Elemento links scroll -->
+      <div class="header__links">
+        <img src="assets/img/upload-arrow.png" class="header__links--share" alt="">
+        <button type="button" class="header__links--follow" name="button">Seguir tablero</button>
+      </div>
+      <!-- Elemento info -->
+      <div class="header__info">
+        <h1 class="header__info--title">Web UI</h1>
+        <label for=""><span class="header__info--pines"></span>Pines</label>
+        <label for=""><span class="header__info--followers"></span>Seguidores</label>
+        <div class="header__info--photo"></div>
+      </div>
+    </header>
+
+    <!-- Bloque board -->
+    <section class="board">
+
+      <!-- Bloque item -->
+      <div class="item">
+        <!-- Elemento que contiene la imagen  -->
+        <div class="item__stack">
+          <!-- Imagen -->
+          <img class="item__stack--image" src="{{image}}" alt="" />
+        </div>
+        <!-- Elemento que contiene la informacion -->
+        <div class="item__info">
+          <!-- Modificador que contiene pin -->
+          <div class="item__info--pin-count">
+            <!-- Pin -->
+            <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+          </div>
+          <!-- Modificador que contiene titulos -->
+          <div class="item__info--titles">
+            <!-- Titulo -->
+            <h3 class="item-title">{{title}}</h3>
+            <!-- Fuente -->
+            <div class="item-subtl">{{source}}</div>
+          </div>
+          <!-- Modificador que contiene datos de la persona  -->
+          <div class="item__info--user">
+            <!-- Avatar -->
+            <div class="item-avatar" style="background-image: url({{avatar}});"></div>
+            <!-- Info -->
+            <div class="item-data">
+              <!-- Nombre -->
+              <div class="item-data__dataname">{{name}}</div>
+              <!-- Tag -->
+              <div class="item-data__tagline">{{tagline}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="assets/js/app.js" charset="utf-8"></script>
+  <!-- <script src="assets/js/board.js" charset="utf-8"></script> -->
+</body>
+</html>
